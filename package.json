@@ -1,0 +1,30 @@
+{
+  "name": "MV",
+  "version": "1.0.0",
+  "description": "My Remotion video",
+  "repository": {},
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@remotion/cli": "4.0.137",
+    "@remotion/google-fonts": "4.0.137",
+    "@remotion/motion-blur": "^4.0.139",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "4.0.137"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config": "4.0.137",
+    "@types/react": "^18.0.26",
+    "@types/web": "^0.0.86",
+    "eslint": "^8.43.0",
+    "prettier": "^2.8.8",
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "start": "remotion studio",
+    "build": "remotion render",
+    "upgrade": "remotion upgrade",
+    "test": "eslint src --ext ts,tsx,js,jsx && tsc"
+  },
+  "packageManager": "npm@10.1.0"
+}
