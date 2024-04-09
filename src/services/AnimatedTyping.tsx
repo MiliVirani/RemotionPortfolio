@@ -4,12 +4,14 @@ interface AnimatedTypingProps {
 	text: string;
 	typingSpeed?: number;
 	onFinish?: () => void;
+	style?: React.CSSProperties;
 }
 
 const AnimatedTyping: React.FC<AnimatedTypingProps> = ({
 	text,
-	typingSpeed = 50,
+	typingSpeed = 20,
 	onFinish,
+	style,
 }) => {
 	const [typedText, setTypedText] = useState<string>('');
 
@@ -28,7 +30,7 @@ const AnimatedTyping: React.FC<AnimatedTypingProps> = ({
 		typeWriter(0);
 	}, [text, typingSpeed, onFinish]);
 
-	return <span>{typedText}</span>;
+	return <span style={style}>{typedText}</span>;
 };
 
 export default AnimatedTyping;

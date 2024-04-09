@@ -7,7 +7,7 @@ export const RemotionRoot: React.FC = () => {
 			<Composition
 				id="Overlay"
 				component={Overlay}
-				durationInFrames={200}
+				durationInFrames={800}
 				fps={30}
 				width={594}
 				height={842}
