@@ -26,7 +26,7 @@ const text: React.CSSProperties = {
 	fontWeight: 'bold',
 	fontFamily,
 	fontSize: 23,
-	color: '#4290F5',
+	color: '#4290F5'
 };
 
 export const Overlay: React.FC = () => {
