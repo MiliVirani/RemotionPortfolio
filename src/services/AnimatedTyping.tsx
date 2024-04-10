@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {loadFont} from '@remotion/google-fonts/Roboto';
 
 interface AnimatedTypingProps {
 	text: string;
@@ -6,7 +7,7 @@ interface AnimatedTypingProps {
 	onFinish?: () => void;
 	style?: React.CSSProperties;
 }
-
+const {fontFamily} = loadFont();
 const AnimatedTyping: React.FC<AnimatedTypingProps> = ({
 	text,
 	typingSpeed = 20,
@@ -30,7 +31,7 @@ const AnimatedTyping: React.FC<AnimatedTypingProps> = ({
 		typeWriter(0);
 	}, [text, typingSpeed, onFinish]);
 
-	return <span style={style}>{typedText}</span>;
+	return <span style={{...style, fontFamily}}>{typedText}</span>;
 };
 
 export default AnimatedTyping;
